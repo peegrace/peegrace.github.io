@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Baking Academy - เคล็ดลับการทำเค้กแสนอร่อย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #F0F9FF; /* ฟ้าพาสเทลอ่อน */
+        }
+        .text-pink-sweet { color: #FF85A2; }
+        .bg-pink-sweet { background-color: #FF85A2; }
+        .bg-pink-light { background-color: #FFF0F3; }
+        .border-pink-sweet { border-color: #FF85A2; }
+        .hover-pink:hover { background-color: #FF6B8B; }
+    </style>
+</head>
+<body class="text-slate-700 antialiased selection:bg-pink-200">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold text-sky-500 tracking-wide flex items-center gap-2">
+                🧁 <span class="text-pink-sweet">Sweet</span>Cake
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#intro" class="hover:text-pink-sweet transition-colors text-sky-600">หน้าแรก</a>
+                <a href="#ingredients" class="hover:text-pink-sweet transition-colors text-sky-600">วัตถุดิบ</a>
+                <a href="#steps" class="hover:text-pink-sweet transition-colors text-sky-600">ขั้นตอนการทำ</a>
+                <a href="#tips" class="hover:text-pink-sweet transition-colors text-sky-600">เคล็ดลับ</a>
+            </div>
+            <button onclick="startBaking()" class="bg-pink-sweet text-white px-4 py-2 rounded-full text-xs font-semibold shadow-md hover-pink transition-all transform hover:scale-105">
+                เริ่มทำเค้กกันเลย!
+            </button>
+        </div>
+    </nav>
+
+    <section id="intro" class="relative overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-white py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block bg-white text-pink-sweet px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider shadow-sm border border-pink-100 mb-4 animate-bounce">
+                Baking 101: Basic Vanilla Cake 🎂
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-sky-900 leading-tight mb-6">
+                เนรมิตเค้กเนื้อนุ่มแสนอร่อย <br>
+                <span class="text-pink-sweet">ง่ายๆ ได้ที่บ้านคุณ</span>
+            </h1>
+            <p class="text-base text-sky-700/80 max-w-xl mx-auto mb-8 font-light">
+                คู่มือการทำเค้กวนิลาเนื้อสปันจ์ นุ่มฟู ละมุนลิ้น พร้อมสูตรตกแต่งหน้าเค้กแบบมือโปร สวยงามในโทนสีพาสเทลหวานละมุน
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#steps" class="bg-sky-500 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:bg-sky-600 transition-all">
+                    ดูวิธีทำทีละขั้นตอน
+                </a>
+            </div>
+        </div>
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-pink-200/40 rounded-full filter blur-xl"></div>
+        <div class="absolute -bottom-10 -right-10 w-45 h-45 bg-sky-200/50 rounded-full filter blur-xl"></div>
+    </section>
+
+    <section id="ingredients" class="py-16 max-w-5xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-sky-900 mb-2">วัตถุดิบที่ต้องเตรียม</h2>
+            <div class="w-12 h-1 bg-pink-sweet mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100/60 hover:shadow-md transition-shadow">
+                <h3 class="text-lg font-semibold text-sky-600 mb-4 flex items-center gap-2">
+                    🥣 ส่วนเนื้อเค้ก (Cake Base)
+                </h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> แป้งเค้กตราพัดโบก</span> <span class="font-medium text-pink-sweet">100 กรัม</span>
+                    </li>
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> ผงฟู</span> <span class="font-medium text-pink-sweet">1 ช้อนชา</span>
+                    </li>
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> น้ำตาลทรายป่น</span> <span class="font-medium text-pink-sweet">80 กรัม</span>
+                    </li>
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> ไข่ไก่เบอร์ 2 (อุณหภูมิห้อง)</span> <span class="font-medium text-pink-sweet">3 ฟอง</span>
+                    </li>
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> นมสดรสจืด</span> <span class="font-medium text-pink-sweet">40 มิลลิลิตร</span>
+                    </li>
+                    <li class="flex justify-between pb-2">
+                        <span> เนยจืดละลาย</span> <span class="font-medium text-pink-sweet">70 กรัม</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100/60 hover:shadow-md transition-shadow">
+                <h3 class="text-lg font-semibold text-pink-sweet mb-4 flex items-center gap-2">
+                    ✨ ส่วนครีมแต่งหน้า (Cream & Decor)
+                </h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> วิปปิ้งครีม (ชนิดแดรี่)</span> <span class="font-medium text-sky-500">250 มิลลิลิตร</span>
+                    </li>
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> น้ำตาลไอซิ่ง</span> <span class="font-medium text-sky-500">30 กรัม</span>
+                    </li>
+                    <li class="flex justify-between border-b border-dashed border-sky-100 pb-2">
+                        <span> กลิ่นวนิลา</span> <span class="font-medium text-sky-500">1 ช้อนชา</span>
+                    </li>
+                    <li class="flex justify-between pb-2">
+                        <span> สีผสมอาหารสีชมพู / สีฟ้าพาสเทล</span> <span class="font-medium text-sky-500">ตามชอบ</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-sky-900 mb-2">ขั้นตอนการทำอย่างละเอียด</h2>
+                <p class="text-xs text-sky-400">คลิกที่ปุ่มตัวเลขเพื่อดูแต่ละขั้นตอน</p>
+                <div class="w-12 h-1 bg-pink-sweet mx-auto rounded-full mt-2"></div>
+            </div>
+
+            <div class="flex justify-between max-w-md mx-auto mb-10 overflow-x-auto pb-2 gap-2" id="stepTabs">
+                </div>
+
+            <div class="bg-sky-50 rounded-3xl p-6 md:p-8 border border-sky-100 min-h-[250px] transition-all duration-300" id="stepContent">
+                </div>
+        </div>
+    </section>
+
+    <section id="tips" class="py-16 max-w-5xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-sky-900 mb-2">💡 เคล็ดลับจากเชฟเบเกอรี่</h2>
+            <div class="w-12 h-1 bg-pink-sweet mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-sky-100 text-center">
+                <div class="text-3xl mb-3">🥚</div>
+                <h4 class="font-semibold text-sky-800 mb-2">อุณหภูมิของไข่</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">ควรใช้ไข่ไก่อุณหภูมิห้องเสมอ หากแช่เย็นไว้ให้นำออกมาวางพักก่อน 30 นาที เพื่อให้ตีขึ้นฟูได้ดีที่สุด</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-sky-100 text-center">
+                <div class="text-3xl mb-3">🌡️</div>
+                <h4 class="font-semibold text-sky-800 mb-2">วอร์มเตาอบก่อน</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">เปิดเตาอบทิ้งไว้ให้ได้อุณหภูมิ 175°C ก่อนนำเค้กเข้าอบอย่างน้อย 15 นาที เพื่อให้เค้กขยายตัวสม่ำเสมอ</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-sky-100 text-center">
+                <div class="text-3xl mb-3">🥣</div>
+                <h4 class="font-semibold text-sky-800 mb-2">ห้ามคนแรงตอนท้าย</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">เมื่อใส่แป้งแล้ว ให้ใช้พายยางตะล่อมเบาๆ เป็นรูปตัว J เพื่อป้องกันไม่ให้ฟองอากาศยุบตัว ซึ่งจะทำให้เนื้อเค้กเหนียว</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-sky-900 text-white py-8 text-center text-xs tracking-wider">
+        <p>© 2026 SweetCake Academy. Crafted with 💙 and 💗 for home bakers.</p>
+    </footer>
+
+    <script>
+        // ข้อมูลขั้นตอนการทำเค้ก
+        const bakingSteps = [
+            {
+                step: 1,
+                title: "เตรียมอุปกรณ์และร่อนของแห้ง",
+                desc: "วอร์มเตาอบที่อุณหภูมิ 175 องศาเซลเซียส เตรียมพิมพ์เค้กขนาด 1 ปอนด์โดยทาเนยขาวและปูกระดาษไข จากนั้นนำแป้งเค้กและผงฟูมาร่อนพร้อมกันอย่างน้อย 2 รอบเพื่อให้เนื้อเค้กเนียนนุ่มและฟูกระจายตัวได้ดี"
+            },
+            {
+                step: 2,
+                title: "ตีไข่และน้ำตาลให้ขึ้นฟู",
+                desc: "ตอกไข่ไก่ทั้ง 3 ฟองลงในอ่างผสม ตามด้วยน้ำตาลทรายป่น ใช้เครื่องตีไข่ไฟฟ้าตีด้วยความเร็วสูงจนไข่เปลี่ยนเป็นสีครีมอ่อน มีลักษณะข้นเหนียว (ลองยกหัวตีขึ้นแล้วลากเส้นขีดดู หากเส้นยังคงตัวอยู่ประมาณ 5 วินาที ถือว่าใช้ได้)"
+            },
+            {
+                step: 3,
+                title: "ผสมแป้งและนมสด",
+                desc: "แบ่งแป้งที่ร่อนไว้เป็น 3 ส่วน ทยอยใส่ลงในอ่างผสมไข่ สลับกับนมสด โดยใช้วิธีตะล่อมเบาๆ ด้วยพายยางจากก้นอ่างขึ้นมาด้านบน ห้ามคนแรงเด็ดขาด เพราะจะทำให้ฟองอากาศในไข่ยุบตัวและเค้กจะแน่นกระด้าง"
+            },
+            {
+                step: 4,
+                title: "ใส่เนยละลายและเทลงพิมพ์",
+                desc: "ค่อยๆ เทเนยจืดละลาย (ที่ยังอุ่นอยู่) ลงไปเป็นสายพร้อมกับตะล่อมให้เข้ากันจนเนียนเป็นเนื้อเดียว เทใส่พิมพ์ที่เตรียมไว้ เคาะก้นพิมพ์เบาๆ 2-3 ครั้งเพื่อไล่ฟองอากาศขนาดใหญ่ จากนั้นนำเข้าอบเป็นเวลา 25-30 นาที"
+            },
+            {
+                step: 5,
+                title: "ตีครีมพาสเทลและตกแต่ง",
+                desc: "เมื่อเค้กสุกแล้วนำออกมาพักบนตะแกรงจนเย็นสนิท ระหว่างนั้นตีวิปปิ้งครีมกับน้ำตาลไอซิ่งจนตั้งยอดแข็ง แบ่งครีมมาผสมสีฟ้าและชมพูพาสเทลตามชอบ ปาดครีมลงบนเค้กให้ทั่วแล้วแต่งหน้าด้วยหัวบีบตามจินตนาการ!"
+            }
+        ];
+
+        // ฟังก์ชันสร้างปุ่มเลือกขั้นตอน (Tabs)
+        function generateTabs() {
+            const tabsContainer = document.getElementById('stepTabs');
+            tabsContainer.innerHTML = bakingSteps.map((item, index) => `
+                <button onclick="renderStep(${index})" id="btn-step-${index}" 
+                    class="step-btn w-12 h-12 rounded-full font-bold text-sm flex items-center justify-center transition-all shadow-sm
+                    ${index === 0 ? 'bg-pink-sweet text-white scale-110' : 'bg-sky-100 text-sky-600 hover:bg-sky-200'}">
+                    ${item.step}
+                </button>
+            `).join('');
+        }
+
+        // ฟังก์ชันแสดงเนื้อหาตามขั้นตอนที่เลือก
+        function renderStep(index) {
+            const contentContainer = document.getElementById('stepContent');
+            const data = bakingSteps[index];
+
+            // ไฮไลต์ปุ่มที่ถูกเลือก
+            document.querySelectorAll('.step-btn').forEach((btn, idx) => {
+                if(idx === index) {
+                    btn.classList.add('bg-pink-sweet', 'text-white', 'scale-110');
+                    btn.classList.remove('bg-sky-100', 'text-sky-600');
+                } else {
+                    btn.classList.remove('bg-pink-sweet', 'text-white', 'scale-110');
+                    btn.classList.add('bg-sky-100', 'text-sky-600');
+                }
+            });
+
+            // ใส่เนื้อหาแบบมี Animation เฟดเบาๆ
+            contentContainer.style.opacity = 0;
+            setTimeout(() => {
+                contentContainer.innerHTML = `
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-white text-pink-sweet border border-pink-200 px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                            ขั้นตอนที่ ${data.step}
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-sky-900 mb-3">${data.title}</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">${data.desc}</p>
+                `;
+                contentContainer.style.opacity = 1;
+            }, 150);
+        }
+
+        // ปุ่ม Alert น่ารักๆ เมื่อคลิกเริ่มทำเค้ก
+        function startBaking() {
+            alert("🧁 เตรียมผ้ากันเปื้อนให้พร้อม! แล้วมาลงมือทำเค้กสุดนุ่มไปด้วยกันเลยค่ะ ✨");
+            window.location.hash = "#ingredients";
+        }
+
+        // สั่งทำงานเมื่อโหลดหน้าเว็บ
+        window.onload = function() {
+            generateTabs();
+            renderStep(0); // แสดงขั้นตอนแรกเป็น Default
+        };
+    </script>
+</body>
+</html>
